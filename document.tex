@@ -35,12 +35,16 @@ Tamino P.S.M. Hartmann\\
 
 \maketitle
 \begin{abstract}
-TODO
+This paper represents a short overview over control hand-off issues for automated automotive applications – meaning self-driving cars.
+We will shortly take a look at existing knowledge and then extrapolate problems and solutions that might be of interest.
+% Might want to reword that :P
+Where required, we will fill knowledge gaps with careful presumptions.
 \end{abstract}
 
 \keywords{autonomous vehicle, self-driving car, driver-vehicle interaction, control hand-off}
 
 \section{Introduction}
+% I think the introduction might be too broad – might want to put it more to the point and maybe put the stuff now here in a short <history> section or something.
 
 Autonomous vehicles have a surprisingly long history, although they have only recently become technologically feasible.
 First widely proposed by Norman Bel Geddes in his book Magic Motorways \cite{geddes2009magic} and at the World Fair in 1939, driverless cars were first thought to be cars that were controlled by technology within the road.
@@ -51,25 +55,25 @@ While the first estimates concerning the adoption of autonomous vehicles proved 
 Google's self-driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
 First large steps were made by the introduction of the DARPA-funded Autonomous Land Vehicle project in the United States of America.
 
-% Continue intro correction from here – are you introducing the topic?
+% TODO: Correct ref.
 Indeed the first cars with partial autonomous capabilities have entered commercial production and are publicly available, as can be seen in section \ref{current_tech}.
 These capabilities include systems that keep a car traveling within its lane, park the car, and systems that react to emergency situations, for example by beginning breaking the vehicle even before the driver has had a chance to react.
 
 As these systems continue to increase in modern cars, the role of the driver is transforming from the single controlling entity to a more copilot-like role.
 However the current state of affairs hints that some interaction will always be required by the driver, for example when the autonomous drive system is confronted with a situation it cannot handle.
-This is where a potential massive problem exists: the hand-off of control from the vehicle to the driver, discussed in section \ref{hand_off_issue}.
-Even when the hand-off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
-It is even possible that due to the high automation, drivers become unfamiliar with driving, lowering their capabilities to react in a timely and correct fashion to an emergency.
-This could actually increase the risk of an accident happening.
+This is where a potential massive problem exists: the hand-off of control from the vehicle to the driver.
 
-% This section will introduce the concept of autonomous cars, the main vehicle we will consider for the topic, and introduce the interaction issues that must be considered.
+We will therefore in the following take a closer look at the current state of the technology, how working prototypes handle the issue, and what might be future solutions to arising problems.
+Our reasoning will be based on own contributions and existing work done in automation, such as airplane and train automation, where we will study whether findings can be transferred to autonomous cars.
 
-\section{Current State}
+\section{Current Technological State}
 
 In this section we will take a look at existing work on the topic of interaction issues between autonomous vehicles and their operators.
-Furthermore we will give a brief topic-specific general overview of existing technology and solutions.
+We will begin by shortly locking at alternative fields where automation is already actively in use, mainly aircraft and trains.
+Then we will give a brief topic-specific general overview of existing technology and solutions in the automotive field.
 
 \subsection{Existing Work}
+% Continue here
 
 Little work exists at the time of writing this paper.
 We believe this to be because of two reasons: the relatively young age of the technology and the commercial secrecy of vehicle manufactures.
@@ -123,6 +127,7 @@ This should be considered for the paper as the capability of such a driver to in
 This section explains the issues that already exist and issues that might and or will arise due to autonomous vehicles to the best of our abilities.
 
 \subsection{General Assumptions}
+%reword
 
 Here we will briefly highlight what assumptions we make concerning autonomous vehicles.
 This includes for example that the system will never actively cause an accident (due to fail-safe behavior).
@@ -130,6 +135,7 @@ We will also define the role we assume the driver to have and how he will fulfil
 This should be done to allow us to focus only on the interaction aspects and not on the general technological hurdles that need to be overcome.
 
 \subsection{Driver Readiness and Capabilities}
+% psychological issues
 
 A major issue is the attention span of drivers.
 It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.
@@ -147,6 +153,10 @@ We will look at the problems that arise from an adoption of autonomous technolog
 \subsection{Control Hand-off Issues}
 \label{hand_off_issue}
 % This is actually the main topic, move up and display more prominently
+
+Even when the hand-off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
+It is even possible that due to the high automation, drivers become unfamiliar with driving, lowering their capabilities to react in a timely and correct fashion to an emergency.
+This could actually increase the risk of an accident happening.
 
 \begin{quote}
 The most dangerous moment in a self-driving car involves no immediate or obvious peril.
@@ -179,7 +189,7 @@ We will also offer up our own solutions based on existing work and technologies.
 This section will most likely be highly speculative and thus will have no existing work to be based on.
 
 \section{Possible Future Work}
-% Might want to point to the work being done by the other paper
+% Might want to point to the work being done by the other papers and work that should be done; alternatively, issues that MUST be solved for the technology to be safe
 
 Here we will offer a future outlook and where further work needs to be done.
 This includes systems where control of the vehicle is per default not with the driver – implying autonomous vehicles beyond their adoptive period where control is still with the driver.

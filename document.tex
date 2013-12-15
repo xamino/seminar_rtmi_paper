@@ -33,11 +33,14 @@ Tamino P.S.M. Hartmann\\
        \email{tamino.hartmann@uni-ulm.de}
 }
 
+% Hyphenations here:
+\hyphenation{au-to-no-mo-us}
+
 \maketitle
 \begin{abstract}
 This paper represents a short overview over control hand-off issues for automated automotive applications – meaning self-driving cars.
 We will shortly take a look at existing knowledge and then extrapolate problems and solutions that might be of interest.
-% Might want to reword that :P
+%TODO Might want to reword that :P
 Where required, we will fill knowledge gaps with careful presumptions.
 \end{abstract}
 
@@ -54,7 +57,7 @@ While the first estimates concerning the adoption of autonomous vehicles proved 
 Google's self-driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
 First large steps were made by the introduction of the DARPA-funded Autonomous Land Vehicle project in the United States of America.
 
-% TODO: Correct ref.
+%TODO Correct ref.
 Indeed the first cars with partial autonomous capabilities have entered commercial production and are publicly available, as can be seen in section \ref{current_tech}.
 These capabilities include systems that keep a car traveling within its lane, park the car, and systems that react to emergency situations, for example by beginning breaking the vehicle even before the driver has had a chance to react.
 
@@ -74,7 +77,7 @@ As the University of Ulm has no self-driving car, research for this topic was al
 \subsection{Content of this Paper}
 
 In this paper we will first give an overview over the current state of the technology to the best of our current abilities.
-This will include a section on autonomous technology in non-automotive fields, labeled as off-domain, and a section on exisiting and available technology already deployed in purchaseable cars.
+This will include a section on autonomous technology in non-automotive fields, labeled as off-domain, and a section on existing and available technology already deployed in purchasable cars.
 
 We will then come to the main topic of this paper and provide a discussion of the hand-off problem and possible solutions.
 Finally, we will conclude the paper with an overview and ideas for future research.
@@ -97,44 +100,68 @@ A draft also exists that parallels the proposed paper, but to our knowledge has 
 It will also be incorporated into the proposed paper, especially as it has a similar approach to the topic.
 The draft is however not fully fledged out yet, and thus only of specific use.
 
-The point of commercial secrecy is a harder hurdle however.
+The point of commercial secrecy is a harder hurdle in the context of writing this paper however.
 Some research showed that a multitude of marketing videos and articles exist that show the various features that have been developed and integrated into existing cars.
 However, these publications concentrate mainly on selling the technology, and are therefore not very informative from a technical view and biased as they hide advantages and difficulties.
 
 \subsection{Current Technology}
 \label{current_tech}
-% TODO: Change structure as proposed by Weber
 
 Although most companies that have begun developing autonomous car technology remain relatively secretive, some information is publicly available.
 Therefore we will take a look at some systems of interest that are known to exist at this time, including the few systems already commercially available.
 We will briefly highlight their technological standing and what can be deduced for interaction issues from how they have implemented the technology.
+We will begin by taking a look at off-domain work done for automation, as some of our later points will be based on these.
 
-\subsubsection{Autonomous Trains and Airplanes}
+\subsubsection{Off-Domain}
 % Note that trains haven't been considered in the related work yet, might want to concentrate more on them instead of airplanes.
+% Aircraft, boats, trains, spacecraft!
+
+Automation for vehicles is not constrained only to the car.
+Airplanes have routinely been flying with the so-called autopilot since its widespread adoption around the 1950's.
+In 1947 a military aircraft made a transatlantic flight completely on autopilot, including landing and starting, for the first time.
+Since then the usage of autopilots in commercial and military aircraft has become part of our everyday lives.
+Notably, autopilots were developed to decrease the need of constant vigilance by pilots on long flights.
+
+A more simple use-case can be found in self-steering gear for ships.
+Here too the human operators of the ships face long monotone traveling where little input is required but constant vigilance.
+The self-steering gear allows the operators to transfer the task of keeping the ship on course to a mechanical automation, allowing them to relax.
+
+In the locomotive area, fully autonomous train systems already exist.
+However, it is important to note that this is mainly due to the fact that unlike airplanes and ships, trains run on predefined given routes.
+Also helpful for the automation of trains is that from the start, strong coordination was required to keep trains from running into each other, as they have no capability to avoid a collision by moving out of the way.
+Generally speaking, autonomous systems for trains make strong usage of the comprehensive right-of-way systems already in place.
+
+%TODO operators who have not undergone comparable training --> pick that up later!
+Taking a closer look at the capabilities of these systems allows us to grant some insights into the requirements of automotive automation.
+From a human resource point of view, pilots, helmsmen, and engineers are for the most part highly trained specialists.
+Most of the cars on the road nowadays are driven by operators who have not undergone comparable training.
+From a more technological view, cars pose a unique challenge.
+A right-of-way systems exists, however it is not as static as for trains but a highly dynamic system.
+Furthermore, because cars operate mainly in highly populated areas, a multitude of factors need to be considered for navigation and collision avoidance.
+Just the number of freely moving vehicles increases the difficulty of successive automation by a large margin.
+Add to that that cars share their operational space with people, bicyclists, trucks, and more, and you receive an environment not really suited for automation.
+Concerning their operational environment another point needs to be considered; the fact that the road system on which cars travel is extremely extensive, with a wide range of conditions that need to be considered.
+
+Another problem can be found in the spontaneous operation; unlike trains, and to some extent airplanes, no schedule exists that coordinates their travels.
+Given human nature, this also seems nonviable to implement, as humans would generally consider these limiting factors.
+This can be found in the social and cultural believe that owning a car is considered to be the ultimate freedom, as it allows one to travel when and where one wants.
+
+Compared to the above three fields, cars also have a few advantages.
+For one, their response time can be significantly faster due to high acceleration and deceleration values.
+Inertia and vehicle size are also significantly more manageable than say, trains or ships.
+As cars operate on ground level in a very open environment, they are also capable of avoiding obstacles much better than trains, possibly simply by safely moving off the road to avoid an impending collision.
+The market diversity of automobile manufacturing is also higher than in other vehicle fields.
+As can be seen today, a multitude of companies are already developing independent systems.
+That would decrease the risk of a single point of failure, increasing the safety of traffic in general.
 
 An important point to remember when considering autonomous systems independent of the vehicle they control however is the capabilities of their human counterparts.
 Pilots and train engineers are for the most part highly trained.
 Chauffeurs for cars come near to the concept, but autonomous cars will in general be used by the general population.
 A population that has a varied range of experience, physical handicaps, and for whom driving is a tool to use instead of a profession.
 
-Here we will take a look if lessons can be learned from systems already in use for trains and airplanes.
-This includes issues that have already been identified and have caused accidents.
-Specifically we will study if some lessons can be learned and if their solutions can be applied to self-driving cars.
+\subsubsection{Singular Systems}
 
-\subsubsection{Daimler / Mercedes-Benz}
-
-Daimler is advancing into the field of self-driving cars with its Intelligent Drive technology \cite{www:daimler_intelligent_drive}.
-
-Also interesting is the Attention Assistance function of a S-class Mercedes \cite{www:mercedes_attention_assist}.
-It can be significant for interaction issues as it extends the monitoring the car does from the outside world to the occupants of the vehicle.
-We will propose using such a function to improve how the hand-off issue can be handled.
-
-\subsubsection{Google}
-
-Google is the company that the public mostly associates with self-driving technology.
-Only a few articles exist and no official publication, but there are some videos that might be of concern to the topic.
-One of these shows another aspect of interacting with an autonomous car: the video where a legally blind person uses an autonomous car to drive \cite{www:google_blind}.
-This should be considered for the paper as the capability of such a driver to interact with the car is severely handicapped and therefore should be considered.
+\subsubsection{Comprehensive Systems}
 
 \section{Current and Future Issues}
 
@@ -166,7 +193,7 @@ We will look at the problems that arise from an adoption of autonomous technolog
 
 \subsection{Control Hand-off Issues}
 \label{hand_off_issue}
-% This is actually the main topic, move up and display more prominently
+%TODO This is actually the main topic, move up and display more prominently
 
 Even when the hand-off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
 It is even possible that due to the high automation, drivers become unfamiliar with driving, lowering their capabilities to react in a timely and correct fashion to an emergency.
@@ -196,14 +223,14 @@ This will include a comparison of how it is done in current technology and how i
 We will also consider limiting factors such as when the driver cannot be trusted to be fully capable of controlling the vehicle and whether the system should evaluate if it has a better chance of avoiding problems by not initiating a hand-off in the first place.
 
 \section{Solutions}
-% Todo: come up with some novel solutions that might actually be feasibel – also consider changing the way drivers are trained! Also add in psychological things to consider, such as the switch found in trains to check if the driver is still alert
+%TODO come up with some novel solutions that might actually be feasibel – also consider changing the way drivers are trained! Also add in psychological things to consider, such as the switch found in trains to check if the driver is still alert
 
 In this section we will discuss proposed solutions to the aforementioned issues, if available.
 We will also offer up our own solutions based on existing work and technologies.
 This section will most likely be highly speculative and thus will have no existing work to be based on.
 
 \section{Possible Future Work}
-% Might want to point to the work being done by the other papers and work that should be done; alternatively, issues that MUST be solved for the technology to be safe
+%TODO Might want to point to the work being done by the other papers and work that should be done; alternatively, issues that MUST be solved for the technology to be safe
 
 Here we will offer a future outlook and where further work needs to be done.
 This includes systems where control of the vehicle is per default not with the driver – implying autonomous vehicles beyond their adoptive period where control is still with the driver.

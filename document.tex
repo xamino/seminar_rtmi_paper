@@ -57,7 +57,6 @@ While the first estimates concerning the adoption of autonomous vehicles proved 
 Google's self-driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
 First large steps were made by the introduction of the DARPA-funded Autonomous Land Vehicle project in the United States of America.
 
-%TODO Correct ref.
 Indeed the first cars with partial autonomous capabilities have entered commercial production and are publicly available, as can be seen in section \ref{current_tech}.
 These capabilities include systems that keep a car traveling within its lane, park the car, and systems that react to emergency situations, for example by beginning breaking the vehicle even before the driver has had a chance to react.
 
@@ -113,8 +112,6 @@ We will briefly highlight their technological standing and what can be deduced f
 We will begin by taking a look at off-domain work done for automation, as some of our later points will be based on these.
 
 \subsubsection{Off-Domain}
-% Note that trains haven't been considered in the related work yet, might want to concentrate more on them instead of airplanes.
-% Aircraft, boats, trains, spacecraft!
 
 Automation for vehicles is not constrained only to the car.
 Airplanes have routinely been flying with the so-called autopilot since its widespread adoption around the 1950's.
@@ -131,7 +128,6 @@ However, it is important to note that this is mainly due to the fact that unlike
 Also helpful for the automation of trains is that from the start, strong coordination was required to keep trains from running into each other, as they have no capability to avoid a collision by moving out of the way.
 Generally speaking, autonomous systems for trains make strong usage of the comprehensive right-of-way systems already in place.
 
-%TODO operators who have not undergone comparable training --> pick that up later!
 Taking a closer look at the capabilities of these systems allows us to grant some insights into the requirements of automotive automation.
 From a human resource point of view, pilots, helmsmen, and engineers are for the most part highly trained specialists.
 Most of the cars on the road nowadays are driven by operators who have not undergone comparable training.
@@ -245,21 +241,30 @@ To our knowledge, Google's cars do not require prepared courses.
 However unlike Google, the vehicle uses only standard sensors commonly available – the LIDAR system is currently still relatively expensive and thus unsuited for mass production.
 We have no knowledge on how the vehicle from Mercedes-Benz handles hand-off.
 
-\section{Current and Future Issues}
-%Continue here
+\section{Control Interaction Issues}
+%TODO reword and check
 
-This section explains the issues that already exist and issues that might and or will arise due to autonomous vehicles to the best of our abilities.
+This section explains interaction for controlling an autonomous vehicle that already exist and issues that might and or will arise.
+Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information.
 
 \subsection{General Assumptions}
-%reword
 
 Here we will briefly highlight what assumptions we make concerning autonomous vehicles.
-This includes for example that the system will never actively cause an accident (due to fail-safe behavior).
-We will also define the role we assume the driver to have and how he will fulfill it.
-This should be done to allow us to focus only on the interaction aspects and not on the general technological hurdles that need to be overcome.
+One assumption we make is that the system will never actively cause an accident (due to fail-safe behavior), as has already been implemented in many robotic systems.
+This is technically feasible and to our knowledge already implemented in the autonomous vehicles on the road today.
+Note that a car rear-ending an autonomous vehicle is a passive accident, as the autonomous vehicle had no role in causing it.
+
+The time frame in which hand-off issues exist is also presumed to be constrained.
+It will begin with the first autonomous vehicles, possibly before 2020, and end once all vehicles are autonomous and or networked together with a proven safety record.
+Once such vehicles are the majority of vehicles on public roads, it seems logical to transfer control from the driver to a networked intelligence that is always in full control, as that allows the system to bypass the problem of human error.
+Such advanced systems that can be fully trusted are however still many years away.
+Even should a first world country have a fully autonomous vehicle network, less developed countries might not, meaning that automation might not work there because of a lack of required infrastructure.
+Ideally of course the perfect autonomous vehicle would be fully capable of handling all situations safely by itself without driver interaction, but be capable of networking with other vehicles when required or when available to increase safety and efficiency.
 
 \subsection{Driver Readiness and Capabilities}
+%TODO Continue here
 % psychological issues
+%TODO operators who have not undergone comparable training --> pick that up later!
 
 A major issue is the attention span of drivers.
 It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.

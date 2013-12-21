@@ -281,9 +281,9 @@ The prototype self driving vehicles nowadays automatically execute actions, but 
 On the level of automation proposed by Sheridan and Verplanck \cite{sheridan:human}, such automation is on the sixth level out of ten, where the first level means that the human has full control and the tenth that the automation is fully in control.
 
 However we must consider what happens when the vehicle, likely due to safety concerns, cannot decide on an automatic course of action in the case that it might endanger the life of its occupants.
-This might be the case when a autonomous vehicle comes upon unknown road conditions – such as a section of road work – or when the vehicle suddenly can not sense its surroundings – for example when a road has been snowed over.
-The first example is easy to counter, due to the high probability that the vehicle can warn the driver well in advance that he will be required to take over control.
-The Google self driving car already does this; when it senses an upcoming construction site, it will warn the driver via auditory alarms and a display on the dashboard to take over manual control \cite{www:newyorker_google_car}.
+This might be the case when a autonomous vehicle comes upon unknown road conditions – such as a section of road work – or when the vehicle suddenly cannot sense its surroundings – for example when a road has been snowed over.
+The first example is easy to counter, due to the high probability that the vehicle can warn the driver well in advance that he will be required to take over control, possibly even long before the driver becomes aware of the obstruction.
+The Google self driving car already does this; when it senses an upcoming construction site, it will warn the driver via auditory alarms and a notification on a display on the dashboard, compelling the driver to take over manual control \cite{www:newyorker_google_car}.
 
 The more difficult situation is then the second example – mainly because it is time critical and involves handing over control when the driver might not have the required situational awareness.
 Currently, self driving cars immediately fall down to the first level of automation, leaving all control to the driver.
@@ -301,52 +301,69 @@ If a vehicle can drive itself safely for the majority of a trip, driver skill wi
 This might well become a large problem in the future.
 Overall, it is to assume that driving in general will become less accident-prone, but when critical situations do occur where driver interaction is required and time critical, errors that lead to accidents might actually increase.
 
---------------------------------------------------------------------------------
-Continue here!
-%TODO Continue here
+Interaction issues will also become apparent in fringe cases where the driver is physically or mentally incapable of assuming control.
+An example for this can be found in the promotional video by Google where a blind person is driven around by a self driving vehicle \cite{www:google_blind}.
+Even the case of road construction where the car requires manual control becomes impossible to solve if the human can not or may not take control of the vehicle.
+%TODO link this with LOA: maybe the vehicle will drive more carefully and simply offer solutions?
+Also to be considered are situations where the car might realize that the driver is incapable of manually controlling the vehicle – be the driver drunk or too fatigued.
+Even if they can safely move out of the way and await input from a qualified driver, this presents a significant usage hurdle for the technology.
 
-An increase in automation also implies that drivers will miss out in experience with road situations that are nowadays still common.
-Mainly this means that drivers will become increasingly less capable of reacting correctly in the event that the autonomous system requires their assistance, even if they have been notified to the best of the systems capabilities beforehand.
+Given such a possibility, it might even be generally better if the vehicle simply tries the best course of action it can, instead of trying to hand over control to a driver that might not be capable of offering any help to the situation at hand.
+In that case the hand off becomes an even more serious risk, as the driver would then loose any chance of controlling the vehicle.
+The question here is: can we allow the vehicle to forcibly retain control when the driver might make the situation worse?
 
-This will also lead us to look at how to best convey required situational awareness to a driver in a possibly time-critical situation.
-That again ties in with using attention assistance systems to monitor what information the driver requires to react best.
-
-An important point to remember when considering autonomous systems independent of the vehicle they control however is the capabilities of their human counterparts.
-Pilots and train engineers are for the most part highly trained.
-Chauffeurs for cars come near to the concept, but autonomous cars will in general be used by the general population.
-A population that has a varied range of experience, physical handicaps, and for whom driving is a tool to use instead of a profession.
-
-\begin{quote}
-The most dangerous moment in a self-driving car involves no immediate or obvious peril.
-It is not when, say, the computer must avoid a vehicle swerving into its lane or navigate some other recognizable hazard of the road -- a patch of ice, or a clueless pedestrian stepping into traffic.
-It is when something much more routine takes place: The computer hands over control of the vehicle to a human being.
-In that instant, the human must quickly rouse herself from whatever else she might have been doing while the computer handled the car and focus her attention on the road.
-As scientists now studying this moment have come to realize, the hand-off is laden with risks.
-\end{quote}
-From \cite{www:huffington_post}.
-
-A major issue is the attention span of drivers.
-It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.
-Therefore measuring the driver alertness and adapting how and if the car hands control over to the driver based on it should be considered also.
-
-% Not sure if the quotes can be used thus, but keep for now...
-\begin{quote}
-This brings up the most challenging obstacle on our road to the autonomous- driving future: managing the handoff.
-For as long as anyone, even Google, is willing to predict, cars will by necessity be semiautonomous; human drivers will still have to play some role.
-But figuring out what that role will be is complicated.
-Are we pilots or copilots? How far out of the loop can we be taken?
-\end{quote}
-From \cite{www:wired}.
-
-We will also consider limiting factors such as when the driver cannot be trusted to be fully capable of controlling the vehicle and whether the system should evaluate if it has a better chance of avoiding problems by not initiating a hand-off in the first place.
+We have now shown that the interaction between driver and autonomous vehicle in hand off situations can have serious implications for the utilization of autonomous vehicles.
+While it seems likely that autonomous vehicles will function correctly and drive generally safer even today, the fringe cases where accidents can still happen should not be negated.
 
 \subsection{Solutions}
 \label{solutions}
+
+Now that we have looked at the issue at hand, we will take a look at possible solutions, based off of existing systems and off domain work.
+However we cannot, for previously stated reasons, offer up conclusively proven solutions.
+For the most part the solutions are also not complete solutions to the problems at hand, but should decrease the risk of catastrophic failure in hand off situations at least.
+
+A solution to the problem where the driver might not be capable or allowed to take manual control of the car lies in the levels of automation.
+As stated previously, current autonomous vehicles drop to the first level of automation when human control is required.
+This works from a technical viewpoint as long as the person is authorized to take direct control.
+We propose an alternative system, where the computer would choose the level of control to drop down to depending on the circumstances.
+
+To better visualize the proposal, we will explain it based on the example of a construction zone that the self driving car deems beyond its capabilities.
+Instead of simply alerting the driver that manual control will be required to continue, the computer controlling the car might instead offer up alternative routes that take it around the obstacle.
+The person in control of the car could then either allow the vehicle to pick the best alternative route or give it another destination.
+By simply disallowing the car to traverse into a situation that would make manual control mandatory, the vehicle can remain in direct control and make manual override by the driver unnecessary.
+In essence, we propose that if required or preferred, autonomous vehicles wouldn't drop to the first level of automation.
+Instead, it would simply switch one down to the fifth level of automation, where the vehicle makes suggestions based on the information at hand, lets the human choose one, and then continues automatically by executing the selected one.
+If the vehicle can network with others, another way around the issue would be to allow the autonomous vehicle to slave itself to a manual controlled car for the duration of the unknown situation.
+This might actually be preferable in construction zones where pilot cars are utilized to allow vehicles to traverse the zone; self driving cars might simply create a chain of control.
+Of course, the vehicle must still be aware of its surroundings and actively try to avoid collisions to the best of its abilities.
+That might mean that the chain of control is broken, in which case the car would effectively become stuck.
+
+If the above solution is utilized to allow people to control a car without a license, it would allow them to interact with the vehicle in an abstracted way that would avoid giving them manual control.
+It should work for the most cases where a not time critical hand off is required, meaning where enough time is available that the car can avoid the situation under its own control.
+However for critical situations, the speed at which the vehicle can inform the occupants of a situation and receive instructions on how to avoid it becomes a significant bottleneck.
+The car might not even be able to offer any solutions, effectively rendering this solution inadequate.
+At that point, it might be of more use to use the vehicles' sensors to prepare the car for an imminent collision, for example by preparing seat-belts, airbags, and warning lights.
+
+Another approach to the interaction issue comes from the driver side.
+If the drivers remain capable of taking over control within the required time span, the problem can be decreased.
+However, this requires two things: one, the driver is capable of handling the situation, and two, the driver can take over manual control quickly enough.
+
+The first point is a matter of training and or experience.
+As stated before, it is probable that without any outside motivation, driver experience will rapidly decrease for drivers controlling autonomous vehicles.
+% force drivers to be manually in control x% of the time?
+
 %TODO come up with some novel solutions that might actually be feasibel – also consider changing the way drivers are trained! Also add in psychological things to consider, such as the switch found in trains to check if the driver is still alert
 
 %TODO operators who have not undergone comparable training --> pick that up later!
 
 %TODO vehicle can filter information to ease decision by human
+
+A major issue is the attention span of drivers.
+It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.
+Therefore measuring the driver alertness and adapting how and if the car hands control over to the driver based on it should be considered also.
+
+This will also lead us to look at how to best convey required situational awareness to a driver in a possibly time-critical situation.
+That again ties in with using attention assistance systems to monitor what information the driver requires to react best.
 
 In this section we will discuss proposed solutions to the aforementioned issues, if available.
 We will also offer up our own solutions based on existing work and technologies.

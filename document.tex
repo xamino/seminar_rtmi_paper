@@ -350,13 +350,47 @@ However, this requires two things: one, the driver is capable of handling the si
 
 The first point is a matter of training and or experience.
 As stated before, it is probable that without any outside motivation, driver experience will rapidly decrease for drivers controlling autonomous vehicles.
-% force drivers to be manually in control x% of the time?
+%TODO this might be something for future research
+There is a range of options to prevent that from happening, or at the least to decrease the negative effects.
+One option might be adapting the content and nature of attaining a driver's license.
+Apart from learning the manual control of the vehicle, lessons might be mandatory for readying a driver to react correctly and fast enough in critical hand off situations.
+This might include a range of situations, either simulated or on a prepared test course.
+To make such special training effective, it should be required to test for, and if necessary, repeat it to allow drivers to keep their license active.
+This would go hand in hand with the current trend of making driver's licenses limited for a specific time span, forcing drivers to continually prove that they are capable of safely controlling a vehicle.
+Apart from forcing drivers to continuously remain trained, a better approach might be a more practical one: require drivers to drive a certain amount of their distance manually.
+In the beginning, this might actually work nicely with gradually introducing autonomous vehicles to the general population.
+It might be practical, for example, to allow autonomous control only on highways first.
+This would serve four points rather nicely: one, highways are better suited as controlled environments, with a decreased risk of critical situations where the computer could not react better than a human driver.
+Two, most people are loath to hand control of their vehicle to a computer – except for long voyages or instances where not the act of driving is the primary goal, but reaching the destination is.
+%TODO source
+Third, it would allow drivers to acquire and retain experience, as they would still be in manual control whenever driving on rural roads (with the added benefit that drivers could relax on long voyages and be better suited to driving when leaving the highway).
+And fourth, the on and off ramps of highways can easily be used as controlled and viable hand off zones, without endangering other traffic.
 
-%TODO come up with some novel solutions that might actually be feasibel – also consider changing the way drivers are trained! Also add in psychological things to consider, such as the switch found in trains to check if the driver is still alert
+The second problem, making sure that the driver is alert and always ready to take over, is a matter of feedback and alerts.
+This is where the attention assist system could come into play.
+By reading readily available sensor information from inside the vehicle – movement, volume, and gaze tracking – the vehicle can be aware of how aware the driver is.
+This information can be used to enable the car to alert the driver when the computer determines him unfit to continue the voyage, offering to stop for a rest for example.
+Such a system, if correctly implemented, should allow the vehicle to enforce alertness by the driver.
 
-%TODO operators who have not undergone comparable training --> pick that up later!
+But even should the driver be alert and readily able to take over manual control, he might not immediately recognize a critical situation where the computer cannot remain in full control.
+Such a situation might be ice rain, which might suddenly decrease the efficiency of the sensors used to drive enough that the computer cannot safely predict a path, while the driver could easily continue following the road.
+Therefore, a good system for alerting the driver to take over must be in place.
+To secure that the alarm reached the driver, we propose that such a system include not only visual, but also auditory and haptic feedback mechanism.
+Visually, a prominent warning light within the vehicle should serve its purpose; accompany that with a warning alarm while the car also silences any entertainment systems should secure the undivided attention of the driver.
+Add to that haptic feedback, for example rumbling the steering wheel or softly shaking the seat, and we have a system that uses three of the five senses of humans to alert the driver.
 
+Even alerted the driver might however lack information to behave correctly in a critical situation.
+To counter this, we propose making the overview view of what the car senses as seen for example in figure \ref{fig:google_tech_view} standard within all autonomous vehicles.
+By reducing visual clutter, such a display should give an excellent overview of the cars surroundings, including the blind spots that drivers usually cannot perceive.
+It should even be able to implement a system that highlights the problem the car encountered, allowing the driver to correctly assess the situation with a glance.
+Beyond that, a heads-up-display that can display warnings and alerts on the windshield could also be of significant help.
+
+%TODO switch found in trains to check if the driver is still alert
 %TODO vehicle can filter information to ease decision by human
+
+Also mention the article (if you can find it) where that one journalist said that just the display of what the car senses would be an enormous help for driving.
+Could imply that the hand-off might not be such a huge problem if the driver has such information and can react on it.
+Hell, the car could even highlight the problems etc. well before they become critical.
 
 A major issue is the attention span of drivers.
 It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.
@@ -368,10 +402,6 @@ That again ties in with using attention assistance systems to monitor what infor
 In this section we will discuss proposed solutions to the aforementioned issues, if available.
 We will also offer up our own solutions based on existing work and technologies.
 This section will most likely be highly speculative and thus will have no existing work to be based on.
-
-Also mention the article (if you can find it) where that one journalist said that just the display of what the car senses would be an enormous help for driving.
-Could imply that the hand-off might not be such a huge problem if the driver has such information and can react on it.
-Hell, the car could even highlight the problems etc. well before they become critical.
 
 Even when the hand-off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
 It is even possible that due to the high automation, drivers become unfamiliar with driving, lowering their capabilities to react in a timely and correct fashion to an emergency.

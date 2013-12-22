@@ -38,13 +38,12 @@ Tamino P.S.M. Hartmann\\
 
 \maketitle
 \begin{abstract}
-This paper represents a short overview over control hand-off issues for automated automotive applications – meaning self-driving cars.
-We will shortly take a look at existing knowledge and then extrapolate problems and solutions that might be of interest.
-%TODO Might want to reword that :P
-Where required, we will fill knowledge gaps with careful presumptions.
+This paper represents a short overview over control hand off issues for automated automotive applications – meaning self driving cars.
+We will shortly take a look at existing systems and knowledge and then extrapolate problems and solutions that might be of interest.
+We also present some areas for future work and research with concrete proposals.
 \end{abstract}
 
-\keywords{autonomous vehicle, self-driving car, driver-vehicle interaction, control hand-off}
+\keywords{autonomous vehicle, self driving car, driver automation interaction, control hand off}
 
 \section{Introduction}
 
@@ -54,7 +53,7 @@ Only in the 1980's did the steering control move from the road into the car itse
 There it has stayed for now, although due to the significant adoption of ubiquitous networking, the first systems have now been proposed where individual cars communicate with each other to further improve congestion and transport flow – effectively moving control back to a common intelligence.
 
 While the first estimates concerning the adoption of autonomous vehicles proved to be widely optimistic, we have now come into a time where the technology is capable of fulfilling this science fiction dream.
-Google's self-driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
+Google's self driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
 First large steps were made by the introduction of the DARPA-funded Autonomous Land Vehicle project in the United States of America.
 
 Indeed the first cars with partial autonomous capabilities have entered commercial production and are publicly available, as can be seen in section \ref{current_tech}.
@@ -62,7 +61,7 @@ These capabilities include systems that keep a car traveling within its lane, pa
 
 As these systems continue to increase in modern cars, the role of the driver is transforming from the single controlling entity to a more copilot-like role.
 However the current state of affairs hints that some interaction will always be required by the driver, for example when the autonomous drive system is confronted with a situation it cannot handle.
-This is where a potential massive problem exists: the hand-off of control from the vehicle to the driver.
+This is where a potential massive problem exists: the hand off of control from the vehicle to the driver.
 
 We will therefore in the following take a closer look at the current state of the technology, how working prototypes handle the issue, and what might be future solutions to arising problems.
 Our reasoning will be based on own contributions and existing work done in automation, such as airplane and train automation, where we will study whether findings can be transferred to autonomous cars.
@@ -71,14 +70,14 @@ Our reasoning will be based on own contributions and existing work done in autom
 
 Due to the secretory nature of automotive manufacturers, only inconclusive knowledge is accessible to the general public.
 This paper is therefore based mostly on presumptions and extrapolations from published videos and articles.
-As the University of Ulm has no self-driving car, research for this topic was also beyond the scope of the seminar for which this paper was written.
+As the University of Ulm has no self driving car, research for this topic was also beyond the scope of the seminar for which this paper was written.
 
 \subsection{Content of this Paper}
 
 In this paper we will first give an overview over the current state of the technology to the best of our current abilities.
 This will include a section on autonomous technology in non-automotive fields, labeled as off-domain, and a section on existing and available technology already deployed in purchasable cars.
 
-We will then come to the main topic of this paper and provide a discussion of the hand-off problem and possible solutions.
+We will then come to the main topic of this paper and provide a discussion of the hand off problem and possible solutions.
 Finally, we will conclude the paper with an overview and ideas for future research.
 
 \section{Current Technological State}
@@ -155,7 +154,7 @@ That would decrease the risk of a single point of failure, increasing the safety
 
 In this section, we will take a look at systems that handle single aspects of driving for the driver.
 These include for example systems for automatic parking, lane assistants, or collision avoidance systems.
-An overview of interaction solutions that are used by these is given at the end of this section, as these will be relevant for hand-off considerations later.
+An overview of interaction solutions that are used by these is given at the end of this section, as these will be relevant for hand off considerations later.
 
 An interesting system is the Distronic system from Mercedes Benz \cite{www:mercedes_pre_safe}.
 This system is in essence an adaptive cruise control that is aware of vehicles in front of the car.
@@ -231,8 +230,8 @@ Figure \ref{fig:google_tech_view} shows a screenshot of the display.
 
 Google's self driving car is currently only capable of driving under almost ideal situations.
 If the car encounters a construction cite for example, it gives an auditory warning that the driver will have to take over control within the next mile, for example \cite{www:newyorker_google_car}.
-The above citation is the only mention we found of how Google's vehicles handle the hand-off.
-Of course, given advanced warning only works if the vehicle has a chance of detecting the imminent hand-off early enough to give the driver ample time to adjust and take over control from the automation.
+The above citation is the only mention we found of how Google's vehicles handle the hand off.
+Of course, given advanced warning only works if the vehicle has a chance of detecting the imminent hand off early enough to give the driver ample time to adjust and take over control from the automation.
 Ideally of course, the vehicle would never have to hand control to its driver – but the technology is still a good bit away from that level of intelligence.
 One must always keep in mind that computers have difficulties handling a task in an open system, such as driving a vehicle through a highly variable environment.
 
@@ -241,7 +240,7 @@ Mercedes-Benz also has a prototype in the works which has already successfully d
 From the video it is however clear that the car navigates on a predefined and mapped route that has been prepared for it.
 To our knowledge, Google's cars do not require prepared courses.
 However unlike Google, the vehicle uses only standard sensors commonly available – the LIDAR system is currently still relatively expensive and thus unsuited for mass production.
-We have no knowledge on how the vehicle from Mercedes-Benz handles hand-off.
+We have no knowledge on how the vehicle from Mercedes-Benz handles hand off.
 
 \section{Control Interaction Issues}
 %TODO reword and check
@@ -256,7 +255,7 @@ One assumption we make is that the system will never actively cause an accident 
 This is technically feasible and to our knowledge already implemented in the autonomous vehicles on the road today.
 Note that a car rear-ending an autonomous vehicle is a passive accident, as the autonomous vehicle had no role in causing it.
 
-The time frame in which hand-off issues exist is also presumed to be constrained.
+The time frame in which hand off issues exist is also presumed to be constrained.
 It will begin with the first autonomous vehicles, possibly before 2020, and end once all vehicles are autonomous and or networked together with a proven safety record.
 Once such vehicles are the majority of vehicles on public roads, it seems logical to transfer control from the driver to a networked intelligence that is always in full control, as that allows the system to bypass the problem of human error.
 Such advanced systems that can be fully trusted are however still many years away.
@@ -265,7 +264,7 @@ Ideally of course the perfect autonomous vehicle would be fully capable of handl
 
 \subsection{Vehicle Automation Interaction}
 
-To better understand hand-off issues, one must understand the basic interaction between machine and controller – in this case, vehicle and driver.
+To better understand hand off issues, one must understand the basic interaction between machine and controller – in this case, vehicle and driver.
 On the subject of sharing and trading control between automation and operator a subset of work exists which is relevant to the hand off issue for autonomous driving.
 
 A general approach to the issue of sharing and trading control is to be found in the paper by Toshiyuki Inagaki \cite{inagaki:adaptive}.
@@ -413,12 +412,16 @@ Again, making sufficient information available fast enough and easy to understan
 One could consider for example that utilizing some artificial intelligence algorithms, the autonomous vehicle might decide by itself what range of information to present a driver and how to best present it.
 This might lend itself to the topic because it allows the system to react adaptively to the needs and capabilities of the intended recipient – the driver.
 
+To enable sound research, the autonomous vehicle field currently lacks a shared, public pool of raw data.
+Therefore we would like to encourage companies and universities that have such data to make it publicly available, as it is essential for the safe development of interoperable self driving cars.
+As in other domains where automation has been introduced, standards must be found that are strictly adhered to, based on common ground.
+
 \section{Conclusion}
 
-This section will be a summary of our findings.
-
-In this paper, we have highlighted that much remains to be done for interaction issues during autonomous driving.
-We have taken note that little public research exists, although various aspects should be studied and expanded upon.
+In this paper we have given an overview of the current state of automation technology in the automotive domain and off domain.
+Based on this information, we have highlighted the problem of human-automation interaction for automotive applications.
+Furthermore we have offered up points where solutions might be viable and formulated some concrete examples, although we lack any proof that they could be viable.
+Therefore we have proposed some areas that could use some serious research work if non yet exists.
 
 % do not change the bibliography style
 \bibliographystyle{abbrv}

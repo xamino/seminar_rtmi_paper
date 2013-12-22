@@ -53,7 +53,7 @@ Only in the 1980's did the steering control move from the road into the car itse
 There it has stayed for now, although due to the significant adoption of ubiquitous networking, the first systems have now been proposed where individual cars communicate with each other to further improve congestion and transport flow – effectively moving control back to a common intelligence.
 
 While the first estimates concerning the adoption of autonomous vehicles proved to be widely optimistic, we have now come into a time where the technology is capable of fulfilling this science fiction dream.
-Google's self driving car \cite{www:google_car} has been widely reported on, although by far not the first project within the field.
+Google's self driving car has been widely reported on \cite{www:newyorker_google_car}, although by far not the first project within the field.
 First large steps were made by the introduction of the DARPA-funded Autonomous Land Vehicle project in the United States of America.
 
 Indeed the first cars with partial autonomous capabilities have entered commercial production and are publicly available, as can be seen in section \ref{current_tech}.
@@ -94,9 +94,9 @@ We believe this to be because of two reasons: the relatively young age of the te
 An article in the Huffington Post \cite{www:huffington_post} brought the work of Clifford Nass to our attention who has begun working on interaction issues.
 However no published work has yet been publicly been made available.
 
-A draft also exists that parallels the proposed paper, but to our knowledge has not been finished yet \cite{cummings:authority}.
-It will also be incorporated into the proposed paper, especially as it has a similar approach to the topic.
-The draft is however not fully fledged out yet, and thus only of specific use.
+A draft also exists that parallels our work in this paper, but to our knowledge has not been finished yet \cite{cummings:authority}.
+The draft is however not fully fledged out yet, and thus only of specific use, although it is laudable that some work on the topic already exists.
+We have tried to offer a more in-depth look at the topic compared to the draft, which takes a more general approach.
 
 The point of commercial secrecy is a harder hurdle in the context of writing this paper however.
 Some research showed that a multitude of marketing videos and articles exist that show the various features that have been developed and integrated into existing cars.
@@ -243,10 +243,9 @@ However unlike Google, the vehicle uses only standard sensors commonly available
 We have no knowledge on how the vehicle from Mercedes-Benz handles hand off.
 
 \section{Control Interaction Issues}
-%TODO reword and check
 
 This section explains interaction for controlling an autonomous vehicle that already exist and issues that might and or will arise.
-Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information.
+Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information and you will err on the safe side.
 
 \subsection{General Assumptions}
 
@@ -303,7 +302,6 @@ Overall, it is to assume that driving in general will become less accident-prone
 Interaction issues will also become apparent in fringe cases where the driver is physically or mentally incapable of assuming control.
 An example for this can be found in the promotional video by Google where a blind person is driven around by a self driving vehicle \cite{www:google_blind}.
 Even the case of road construction where the car requires manual control becomes impossible to solve if the human can not or may not take control of the vehicle.
-%TODO link this with LOA: maybe the vehicle will drive more carefully and simply offer solutions?
 Also to be considered are situations where the car might realize that the driver is incapable of manually controlling the vehicle – be the driver drunk or too fatigued.
 Even if they can safely move out of the way and await input from a qualified driver, this presents a significant usage hurdle for the technology.
 
@@ -349,7 +347,6 @@ However, this requires two things: one, the driver is capable of handling the si
 
 The first point is a matter of training and or experience.
 As stated before, it is probable that without any outside motivation, driver experience will rapidly decrease for drivers controlling autonomous vehicles.
-%TODO this might be something for future research
 There is a range of options to prevent that from happening, or at the least to decrease the negative effects.
 One option might be adapting the content and nature of attaining a driver's license.
 Apart from learning the manual control of the vehicle, lessons might be mandatory for readying a driver to react correctly and fast enough in critical hand off situations.
@@ -360,8 +357,7 @@ Apart from forcing drivers to continuously remain trained, a better approach mig
 In the beginning, this might actually work nicely with gradually introducing autonomous vehicles to the general population.
 It might be practical, for example, to allow autonomous control only on highways first.
 This would serve four points rather nicely: one, highways are better suited as controlled environments, with a decreased risk of critical situations where the computer could not react better than a human driver.
-Two, most people are loath to hand control of their vehicle to a computer – except for long voyages or instances where not the act of driving is the primary goal, but reaching the destination is.
-%TODO source
+Two, a significant percentage of people are loath to hand control of their vehicle to a computer \cite{www:power_study} – except for long voyages or instances where not the act of driving is the primary goal, but reaching the destination is.
 Third, it would allow drivers to acquire and retain experience, as they would still be in manual control whenever driving on rural roads (with the added benefit that drivers could relax on long voyages and be better suited to driving when leaving the highway).
 And fourth, the on and off ramps of highways can easily be used as controlled and viable hand off zones, without endangering other traffic.
 
@@ -399,22 +395,25 @@ This might be required when crossing into a new country where the laws governing
 
 \section{Future Research}
 
-Here we will offer a future outlook and where further work should be done.
-These proposal are mainly based on the previous section, which offer up a range of questions and uncertainties.
+Here we will offer a future outlook and where further work should and can be done.
+These proposal are mainly based on the previous section, which offer up a range of questions and uncertainties that we will now highlight and use to suggest further work.
 
-One topic that is worthy of research is how to warn the driver in critical hand off situations that he now has control – via auditory, visual, and or haptic feedback.
-Finding the right stimuli that alert the driver to the situation without distracting from it will require some studies and further work into psychological effects.
+One topic that is worthy of research is how to warn the driver in critical hand off situations that he now has control – via auditory, visual, and or haptic feedback mechanisms.
+Finding the right stimuli that alert the driver to the situation without distracting him from it will require studies and further work, with strong links to the psychological aspects of human information processing.
 Such research might prove to be of the more immediate importance once fully autonomous vehicles become widely available.
 Parallels could also be found in already existing systems from off domain fields, such as trains and airplanes.
 
 Another interesting question is how to present the information the car continually gathers of its surroundings to the driver.
-Again, making sufficient information available fast enough and easy to understand is a non-trivial task.
+Again, making sufficient information available fast enough and easy to understand is not a trivial task.
 One could consider for example that utilizing some artificial intelligence algorithms, the autonomous vehicle might decide by itself what range of information to present a driver and how to best present it.
 This might lend itself to the topic because it allows the system to react adaptively to the needs and capabilities of the intended recipient – the driver.
 
 To enable sound research, the autonomous vehicle field currently lacks a shared, public pool of raw data.
 Therefore we would like to encourage companies and universities that have such data to make it publicly available, as it is essential for the safe development of interoperable self driving cars.
 As in other domains where automation has been introduced, standards must be found that are strictly adhered to, based on common ground.
+
+Apart form technical points or research that directly applies to the vehicles, more work can also be done for preparing and understanding human drivers in control of autonomous vehicles.
+Studies into how to best prepare drivers for hand off situations under critical situations might be of further interest.
 
 \section{Conclusion}
 
@@ -423,9 +422,11 @@ Based on this information, we have highlighted the problem of human-automation i
 Furthermore we have offered up points where solutions might be viable and formulated some concrete examples, although we lack any proof that they could be viable.
 Therefore we have proposed some areas that could use some serious research work if non yet exists.
 
+{\small
 % do not change the bibliography style
 \bibliographystyle{abbrv}
 \bibliography{sources}  
+}
 
 \balancecolumns
 

@@ -50,7 +50,7 @@ We also present some areas for future work and research with concrete proposals.
 Autonomous vehicles have a surprisingly long history, although they have only recently become technologically feasible.
 First widely proposed by Norman Bel Geddes in his book Magic Motorways \cite{geddes2009magic} and at the World Fair in 1939, driverless cars were first thought to be cars that were controlled by technology within the road.
 Only in the 1980's did the steering control move from the road into the car itself.
-There it has stayed for now, although due to the significant adoption of ubiquitous networking, the first systems have now been proposed where individual cars communicate with each other to further improve congestion and transport flow – effectively moving control back to a common intelligence.
+There it has stayed for now, although due to the significant adoption of ubiquitous networking, the first systems have now been proposed where individual cars communicate with each other to further improve congestion and transport flow – effectively moving control back to an external shared server system.
 
 While the first estimates concerning the adoption of autonomous vehicles proved to be widely optimistic, we have now come into a time where the technology is capable of fulfilling this science fiction dream.
 Google's self driving car has been widely reported on \cite{www:newyorker_google_car}, although by far not the first project within the field.
@@ -83,7 +83,7 @@ Finally, we will conclude the paper with an overview and ideas for future resear
 \section{Current Technological State}
 
 In this section we will take a look at existing work on the topic of interaction issues between autonomous vehicles and their operators.
-We will begin by shortly locking at alternative fields where automation is already actively in use, mainly aircraft and trains, henceforth labeled as off-domain automation.
+We will begin by briefly looking at alternative fields where automation is already actively in use, mainly aircraft and trains, henceforth labeled as off-domain automation.
 Then we will give a brief topic-specific general overview of existing technology and solutions in the automotive field by functionality, from single systems up to comprehensive fully automated vehicles.
 
 \subsection{Existing Research}
@@ -244,7 +244,7 @@ We have no knowledge on how the vehicle from Mercedes-Benz handles hand off.
 
 \section{Control Interaction Issues}
 
-This section explains interaction for controlling an autonomous vehicle that already exist and issues that might and or will arise.
+This section explains interactions for controlling autonomous vehicles that already exist and issues that might and or will arise.
 Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information and you will err on the safe side.
 
 \subsection{General Assumptions}
@@ -279,7 +279,7 @@ The prototype self driving vehicles nowadays automatically execute actions, but 
 On the level of automation proposed by Sheridan and Verplanck \cite{sheridan:human}, such automation is on the sixth level out of ten, where the first level means that the human has full control and the tenth that the automation is fully in control.
 
 However we must consider what happens when the vehicle, likely due to safety concerns, cannot decide on an automatic course of action in the case that it might endanger the life of its occupants.
-This might be the case when a autonomous vehicle comes upon unknown road conditions – such as a section of road work – or when the vehicle suddenly cannot sense its surroundings – for example when a road has been snowed over.
+This might be the case when an autonomous vehicle comes upon unknown road conditions – such as a section of road work – or when the vehicle suddenly cannot sense its surroundings – for example when a road has been snowed over.
 The first example is easy to counter, due to the high probability that the vehicle can warn the driver well in advance that he will be required to take over control, possibly even long before the driver becomes aware of the obstruction.
 The Google self driving car already does this; when it senses an upcoming construction site, it will warn the driver via auditory alarms and a notification on a display on the dashboard, compelling the driver to take over manual control \cite{www:newyorker_google_car}.
 
@@ -332,7 +332,7 @@ In essence, we propose that if required or preferred, autonomous vehicles wouldn
 Instead, it would simply switch one down to the fifth level of automation, where the vehicle makes suggestions based on the information at hand, lets the human choose one, and then continues automatically by executing the selected one.
 If the vehicle can network with others, another way around the issue would be to allow the autonomous vehicle to slave itself to a manual controlled car for the duration of the unknown situation.
 This might actually be preferable in construction zones where pilot cars are utilized to allow vehicles to traverse the zone; self driving cars might simply create a chain of control.
-Of course, the vehicle must still be aware of its surroundings and actively try to avoid collisions to the best of its abilities.
+Of course, the vehicle must still be aware of its surroundings and actively try to avoid collisions to the best of its abilities – it shouldn't trust the master vehicle fully.
 That might mean that the chain of control is broken, in which case the car would effectively become stuck.
 
 If the above solution is utilized to allow people to control a car without a license, it would allow them to interact with the vehicle in an abstracted way that would avoid giving them manual control.
@@ -396,7 +396,7 @@ This might be required when crossing into a new country where the laws governing
 \section{Future Research}
 
 Here we will offer a future outlook and where further work should and can be done.
-These proposal are mainly based on the previous section, which offer up a range of questions and uncertainties that we will now highlight and use to suggest further work.
+These proposals are mainly based on the previous section, which offer up a range of questions and uncertainties that we will now highlight and use to suggest further work.
 
 One topic that is worthy of research is how to warn the driver in critical hand off situations that he now has control – via auditory, visual, and or haptic feedback mechanisms.
 Finding the right stimuli that alert the driver to the situation without distracting him from it will require studies and further work, with strong links to the psychological aspects of human information processing.

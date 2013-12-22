@@ -371,6 +371,8 @@ This is where the attention assist system could come into play.
 By reading readily available sensor information from inside the vehicle – movement, volume, and gaze tracking – the vehicle can be aware of how aware the driver is.
 This information can be used to enable the car to alert the driver when the computer determines him unfit to continue the voyage, offering to stop for a rest for example.
 Such a system, if correctly implemented, should allow the vehicle to enforce alertness by the driver.
+To supplement any passive sensors, one could also implement a dead man's switch as an active sensor.
+This could be touch detection on the steering wheel or a switch the driver has to press in random intervals.
 
 But even should the driver be alert and readily able to take over manual control, he might not immediately recognize a critical situation where the computer cannot remain in full control.
 Such a situation might be ice rain, which might suddenly decrease the efficiency of the sensors used to drive enough that the computer cannot safely predict a path, while the driver could easily continue following the road.
@@ -379,51 +381,37 @@ To secure that the alarm reached the driver, we propose that such a system inclu
 Visually, a prominent warning light within the vehicle should serve its purpose; accompany that with a warning alarm while the car also silences any entertainment systems should secure the undivided attention of the driver.
 Add to that haptic feedback, for example rumbling the steering wheel or softly shaking the seat, and we have a system that uses three of the five senses of humans to alert the driver.
 
-Even alerted the driver might however lack information to behave correctly in a critical situation.
+Even when the hand off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
+Even alerted the driver might lack information to behave correctly in a critical situation and be unable to process it quickly enough even if he has it.
 To counter this, we propose making the overview view of what the car senses as seen for example in figure \ref{fig:google_tech_view} standard within all autonomous vehicles.
 By reducing visual clutter, such a display should give an excellent overview of the cars surroundings, including the blind spots that drivers usually cannot perceive.
 It should even be able to implement a system that highlights the problem the car encountered, allowing the driver to correctly assess the situation with a glance.
 Beyond that, a heads-up-display that can display warnings and alerts on the windshield could also be of significant help.
+Of course, any display would have to offer up a filtered view that is best suited to the capabilities of the driver.
 
-%TODO switch found in trains to check if the driver is still alert
-%TODO vehicle can filter information to ease decision by human
-
-Also mention the article (if you can find it) where that one journalist said that just the display of what the car senses would be an enormous help for driving.
-Could imply that the hand-off might not be such a huge problem if the driver has such information and can react on it.
-Hell, the car could even highlight the problems etc. well before they become critical.
-
-A major issue is the attention span of drivers.
-It has been shown that humans tend to lose focus when supervising an autonomous system that seldom requires interaction.
-Therefore measuring the driver alertness and adapting how and if the car hands control over to the driver based on it should be considered also.
-
-This will also lead us to look at how to best convey required situational awareness to a driver in a possibly time-critical situation.
-That again ties in with using attention assistance systems to monitor what information the driver requires to react best.
-
-In this section we will discuss proposed solutions to the aforementioned issues, if available.
-We will also offer up our own solutions based on existing work and technologies.
-This section will most likely be highly speculative and thus will have no existing work to be based on.
-
-Even when the hand-off is successful (implying that the driver is in full control of the vehicle and aware of the fact), he will take a moment to understand the situation – moments he might not have.
-It is even possible that due to the high automation, drivers become unfamiliar with driving, lowering their capabilities to react in a timely and correct fashion to an emergency.
-This could actually increase the risk of an accident happening.
-
-A solution to the problem of drivers not being able to safely take control from the automation could be the adaption of how drivers are trained.
-Apart from the basics of driving a car, courses on how to react in emergency situations could become necessary.
-Always remaining ready is however not a task that many humans can easily do – however they will still need to drive.
+Always remaining ready is however not a task that many humans can easily do – however they will still have a need of transportation for the foreseeable future.
 To solve this, we propose a system for labeling automation systems in respect to driver capabilities.
 Fully autonomous vehicles that would always drive so that no driver interaction is required would be free to use for everyone.
 These might however be limited in where they drive and how fast they drive.
 This would serve to allow the automation to drive in a safe environment that has the least amount of distractions possible, effectively rendering the need for a manual override to zero.
 On the other side of the spectrum would be cars that can act fully autonomous when the computers deem it safe, but allow or even require the driver to take over when the situation warrants it.
+These would only be available to drivers that have been certified for the safe operation of a fully autonomous vehicle.
 This might be required when crossing into a new country where the laws governing driving are substantially different, rendering the automation incapable of functioning safely.
 
-\section{Possible Future Work}
-%TODO Might want to point to the work being done by the other papers and work that should be done; alternatively, issues that MUST be solved for the technology to be safe
+\section{Future Research}
 
-Here we will offer a future outlook and where further work needs to be done.
-This includes systems where control of the vehicle is per default not with the driver – implying autonomous vehicles beyond their adoptive period where control is still with the driver.
+Here we will offer a future outlook and where further work should be done.
+These proposal are mainly based on the previous section, which offer up a range of questions and uncertainties.
 
-Research into how to warn the driver in critical hand off situations that he now has control – auditory, visual, and haptic feedback.
+One topic that is worthy of research is how to warn the driver in critical hand off situations that he now has control – via auditory, visual, and or haptic feedback.
+Finding the right stimuli that alert the driver to the situation without distracting from it will require some studies and further work into psychological effects.
+Such research might prove to be of the more immediate importance once fully autonomous vehicles become widely available.
+Parallels could also be found in already existing systems from off domain fields, such as trains and airplanes.
+
+Another interesting question is how to present the information the car continually gathers of its surroundings to the driver.
+Again, making sufficient information available fast enough and easy to understand is a non-trivial task.
+One could consider for example that utilizing some artificial intelligence algorithms, the autonomous vehicle might decide by itself what range of information to present a driver and how to best present it.
+This might lend itself to the topic because it allows the system to react adaptively to the needs and capabilities of the intended recipient – the driver.
 
 \section{Conclusion}
 

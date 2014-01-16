@@ -36,8 +36,11 @@ Tamino P.S.M. Hartmann\\
 % Hyphenations here:
 \hyphenation{au-ton-o-mous}
 
+%TODO Citations are missing in section 2.2.1 (i.e. for the dates), also in section 2.2.2 (i.e. moving the car from stillstand isn't allowed), 2.2.3 (i.e. ...one journalist...) and so on
+
 \maketitle
 \begin{abstract}
+%TODO Abstract too general, make it more specific for the paper.
 This paper represents a short overview over control hand off issues for automated automotive applications – meaning self driving cars.
 We will shortly take a look at existing systems and knowledge and then extrapolate problems and solutions that might be of interest.
 We also present some areas for future work and research with concrete proposals.
@@ -47,7 +50,7 @@ We also present some areas for future work and research with concrete proposals.
 
 \section{Introduction}
 
-Autonomous vehicles have a surprisingly long history, although they have only recently become technologically feasible.
+Autonomous vehicles have a comparatively long history, even though they have only recently become technologically feasible thanks to the advance of computation capabilities.
 First widely proposed by Norman Bel Geddes in his book Magic Motorways \cite{geddes2009magic} and at the World Fair in 1939, driverless cars were first thought to be cars that were controlled by technology within the road.
 Only in the 1980's did the steering control move from the road into the car itself.
 There it has stayed for now, although due to the significant adoption of ubiquitous networking, the first systems have now been proposed where individual cars communicate with each other to further improve congestion and transport flow – effectively moving control back to an external shared server system.
@@ -95,11 +98,11 @@ An article in the Huffington Post \cite{www:huffington_post} brought the work of
 However no published work has yet been publicly been made available.
 
 A draft also exists that parallels our work in this paper, but to our knowledge has not been finished yet \cite{cummings:authority}.
-The draft is however not fully fledged out yet, and thus only of specific use, although it is laudable that some work on the topic already exists.
+The draft is however not fully fledged out yet, and thus only of specific use.
+It shows at least that some public research work is being done.
 We have tried to offer a more in-depth look at the topic compared to the draft, which takes a more general approach.
 
-The point of commercial secrecy is a harder hurdle in the context of writing this paper however.
-Some research showed that a multitude of marketing videos and articles exist that show the various features that have been developed and integrated into existing cars.
+For the commercial work, some research showed a multitude of marketing videos and articles exist that show the various features that have been developed and integrated into existing cars.
 However, these publications concentrate mainly on selling the technology, and are therefore not very informative from a technical view and biased as they hide advantages and difficulties.
 
 \subsection{Current Technology}
@@ -219,6 +222,7 @@ Google has a fleet of vehicles – a dozen on the road at any given time – and
 	\centering
 	\includegraphics[width=\columnwidth]{img/google_tech_view.jpg}
 	\caption[Tech View]{A screenshot of the digital representation shown to the vehicles' occupants for debugging purposes.}
+	%TODO Better description!
 	\label{fig:google_tech_view}
 \end{figure}
 
@@ -245,7 +249,7 @@ We have no knowledge on how the vehicle from Mercedes-Benz handles hand off.
 \section{Control Interaction Issues}
 
 This section explains interactions for controlling autonomous vehicles that already exist and issues that might and or will arise.
-Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information and you will err on the safe side.
+Most of the following content is however not based on hard research; consider it a proposal and extrapolation from available information without research backing it.
 
 \subsection{General Assumptions}
 

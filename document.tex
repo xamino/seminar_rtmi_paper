@@ -36,14 +36,16 @@ Tamino P.S.M. Hartmann\\
 % Hyphenations here:
 \hyphenation{au-ton-o-mous}
 
-%TODO Citations are missing in section 2.2.1 (i.e. for the dates), also in section 2.2.2 (i.e. moving the car from stillstand isn't allowed), 2.2.3 (i.e. ...one journalist...) and so on
+%TODO Citations are missing in section 2.2.2 (i.e. moving the car from stillstand isn't allowed), 2.2.3 (i.e. ...one journalist...) and so on
 
 \maketitle
 \begin{abstract}
 %TODO Abstract too general, make it more specific for the paper.
 This paper represents a short overview over control hand off issues for automated automotive applications – meaning self driving cars.
 We will shortly take a look at existing systems and knowledge and then extrapolate problems and solutions that might be of interest.
-We also present some areas for future work and research with concrete proposals.
+This will include autonomous systems that are considered off-domain of self driving cars, such as autopilot systems in shipping and flight.
+We also present some areas for future work and research with concrete proposals based on existing preliminary work.
+We will conclude with a call for more research due to a lack of publicly available work.
 \end{abstract}
 
 \keywords{autonomous vehicle, self driving car, driver automation interaction, control hand off}
@@ -94,8 +96,13 @@ Then we will give a brief topic-specific general overview of existing technology
 Little research work in the form of public papers exists at the time of writing.
 We believe this to be because of two reasons: the relatively young age of the technology and the commercial secrecy of vehicle manufactures.
 
+The National Highway Traffic Safety Administration has published a press release \cite{nhtsa:av_policy} that partially handles the topics that we will discuss.
+The policy includes proposals for human factor research into the hand off situation, although no specifics are given.
+
 An article in the Huffington Post \cite{www:huffington_post} brought the work of Clifford Nass to our attention who has begun working on interaction issues.
 However no published work has yet been publicly been made available.
+From the article, we can deduct that Clifford Nass is aware of the hand off issue, stating that the issue is the most dangerous for level 4 automated vehicles and the least studied.
+His work will in the future include research on driver concentration, attention, emotional state, and performance during various autonomous vehicle operation situations.
 
 A draft also exists that parallels our work in this paper, but to our knowledge has not been finished yet \cite{cummings:authority}.
 The draft is however not fully fledged out yet, and thus only of specific use.
@@ -117,7 +124,7 @@ We will begin by taking a look at off-domain work done for automation, as some o
 
 Automation for vehicles is not constrained only to the car.
 Airplanes have routinely been flying with the so-called autopilot since its widespread adoption around the 1950's.
-In 1947 a military aircraft made a transatlantic flight completely on autopilot, including landing and starting, for the first time.
+In 1947 a military aircraft made a transatlantic flight completely on autopilot, including landing and starting, for the first time \cite{www:wiki_autopilot}.
 Since then the usage of autopilots in commercial and military aircraft has become part of our everyday lives.
 Notably, autopilots were developed to decrease the need of constant vigilance by pilots on long flights.
 
@@ -221,8 +228,7 @@ Google has a fleet of vehicles – a dozen on the road at any given time – and
 \begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{img/google_tech_view.jpg}
-	\caption[Tech View]{A screenshot of the digital representation shown to the vehicles' occupants for debugging purposes.}
-	%TODO Better description!
+	\caption[Tech View]{A screenshot of the digital representation shown to the vehicles' occupants for debugging purposes. This is a live view of the field of view of all the sensors of the vehicle rendered from a point of view behind and above the vehicle.}
 	\label{fig:google_tech_view}
 \end{figure}
 
@@ -426,11 +432,11 @@ Based on this information, we have highlighted the problem of human-automation i
 Furthermore we have offered up points where solutions might be viable and formulated some concrete examples, although we lack any proof that they could be viable.
 Therefore we have proposed some areas that could use some serious research work if non yet exists.
 
-{\small
+%{\small
 % do not change the bibliography style
 \bibliographystyle{abbrv}
 \bibliography{sources}  
-}
+%}
 
 \balancecolumns
 

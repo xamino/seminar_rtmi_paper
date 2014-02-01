@@ -36,8 +36,6 @@ Tamino P.S.M. Hartmann\\
 % Hyphenations here:
 \hyphenation{au-ton-o-mous}
 
-%TODO Citations are missing in section 2.2.2 (i.e. moving the car from stillstand isn't allowed), 2.2.3 (i.e. ...one journalist...) and so on
-
 \maketitle
 \begin{abstract}
 This paper represents a short overview over control hand off issues for automated automotive applications – meaning self driving cars.
@@ -95,8 +93,11 @@ Then we will give a brief topic-specific general overview of existing technology
 Little research work in the form of public papers exists at the time of writing.
 We believe this to be because of two reasons: the relatively young age of the technology and the commercial secrecy of vehicle manufactures.
 
-The National Highway Traffic Safety Administration has published a press release \cite{nhtsa:av_policy} that partially handles the topics that we will discuss.
+The National Highway Traffic Safety Administration has published a press release \cite{nhtsa_av_policy} that partially handles the topics that we will discuss.
 The policy includes proposals for human factor research into the hand off situation, although no specifics are given.
+Notably the policy also includes proposals for creating government issued tests that automated vehicles should pass to be allowed on the market that test the various capabilities that the vehicle would be required to display.
+Another important proposal that we take from the policy is the recommendation for specific training of drivers for automated vehicles.
+The takeaway of this press release is that an official body is aware of the hand-off issue and the future impact of automated vehicles on existing driving culture.
 
 An article in the Huffington Post \cite{www:huffington_post} brought the work of Clifford Nass to our attention who has begun working on interaction issues.
 However no published work has yet been publicly been made available.
@@ -177,7 +178,8 @@ If a collision is imminent however, the system will slow the car whether or not 
 Such systems are already available from a multitude of companies; see also the similar system from Toyota here \cite{www:toyota_pcs}.
 
 Such fully adaptive cruise control allows drivers to let the car handle long voyages on highways or even the stop-and-go of a congested road.
-Notably however, the system will not move the car from a standstill, as current law prohibits a car to start moving on its own.
+Notably however, the system will not move the car from a standstill in most cases, or only if the vehicle ahead starts moving again within a set, short time (three to four seconds in most implementations).
+This is due to safety concerns and to ensure that the driver is still in control of the vehicle.
 It also does not handle steering, although land assist systems exist that can cooperate with such an adaptive cruise control.
 Driver interaction is however always required, and the responsibility remains with him too.
 
@@ -210,9 +212,6 @@ The next logical step then is to take the driver out of the loop and to combine 
 \subsubsection{Comprehensive Systems}
 \label{comprehensive_systems}
 
-Here, we take a look at the limited knowledge available on the continuous development of fully autonomous cars.
-Mainly we will concentrate on the work done by Google, due to their comparatively high yield of information compared to other companies.
-
 \begin{figure}
 	\centering
 	\includegraphics[width=\columnwidth]{img/google_vehicle.jpg}
@@ -220,9 +219,19 @@ Mainly we will concentrate on the work done by Google, due to their comparativel
 	\label{fig:google_vehicle}
 \end{figure}
 
+Here, we take a look at the limited knowledge available on the continuous development of fully autonomous cars.
+Mainly we will concentrate on the work done by Google, due to their comparatively high yield of information compared to other companies.
+
 Figure \ref{fig:google_vehicle} shows one of Google's fully autonomous vehicles.
 To note is the LIDAR\footnote{LIDAR: LIght raDAR system.} sensor on the roof and the odometer visible on the back wheel.
 Google has a fleet of vehicles – a dozen on the road at any given time – and has driven almost 500,000 kilometers with them in total \cite{www:google_blog_miles}.
+
+The vehicle takes in its surroundings with a range of sensors and creates a digital representation of its surroundings.
+This representation includes information of pedestrians and other vehicles, moving obstacles, the surroundings, information on the road, and the course that the vehicle plans on taking.
+This digital representation is also available for the developers in the vehicle via a large screen that renders it, updating in real-time as the vehicle drives.
+While primarily meant for debugging purposes, such a view would by itself already be nice to have in any modern vehicle, as there are no blind spots and it gives a nice overview of the road situation.
+The problem with such a display would then be that it distracts the driver from the road.
+Figure \ref{fig:google_tech_view} shows a screenshot of the display.
 
 \begin{figure}
 	\centering
@@ -230,12 +239,6 @@ Google has a fleet of vehicles – a dozen on the road at any given time – and
 	\caption[Tech View]{A screenshot of the digital representation shown to the vehicles' occupants for debugging purposes. This is a live view of the field of view of all the sensors of the vehicle rendered from a point of view behind and above the vehicle.}
 	\label{fig:google_tech_view}
 \end{figure}
-
-The vehicle takes in its surroundings with a range of sensors and creates a digital representation of its surroundings.
-This representation includes information of pedestrians and other vehicles, moving obstacles, the surroundings, information on the road, and the course that the vehicle plans on taking.
-This digital representation is also available for the developers in the vehicle via a large screen that renders it, updating in real-time as the vehicle drives.
-While primarily meant for debugging purposes, one journalist noted that such a view would alone already be nice to have in any modern vehicle, as there are no blind spots and it gives a nice overview of the road situation \cite{TODO} TODO.
-Figure \ref{fig:google_tech_view} shows a screenshot of the display.
 
 Google's self driving car is currently only capable of driving under almost ideal situations.
 If the car encounters a construction cite for example, it gives an auditory warning that the driver will have to take over control within the next mile, for example \cite{www:newyorker_google_car}.
